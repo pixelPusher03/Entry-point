@@ -611,7 +611,7 @@
           </div>
         </div>
       </div>
-      <a href="https://anondevsgagency.vercel.app" class="text-gray-500">created by Anon Devs Group Agency</a>
+      <a href="https://anondevsgagency.vercel.app" class="text-gray-500">Copyright 2023 &copy; <span id="year"></span> by Anon Devs Group Agency</a>
     </footer>
     <!-- jQuery if you need it
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -619,6 +619,7 @@
     <script>
       var scrollpos = window.scrollY;
       var header = document.getElementById("header");
+document.getElementById("year").innerHTML = new Date().getFullYear();
       var navcontent = document.getElementById("nav-content");
       var navaction = document.getElementById("navAction");
       var brandname = document.getElementById("brandname");
