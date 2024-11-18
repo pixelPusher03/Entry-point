@@ -107,3 +107,34 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: #23527c;
 }
+
+.social-sign-up {
+  margin-top: 20px;
+}
+
+.google-sign-up {
+  background-color: #dd4b39;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.facebook-sign-up {
+  background-color: #3b5998;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.instagram-sign-up {
+  background-color: #e1306c;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
