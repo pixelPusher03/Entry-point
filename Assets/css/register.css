@@ -115,6 +115,8 @@ button[type="submit"]:hover {
 .google-sign-up {
   background-color: #dd4b39;
   color: #fff;
+    width: 100%;
+    height: 40px;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -124,6 +126,8 @@ button[type="submit"]:hover {
 .facebook-sign-up {
   background-color: #3b5998;
   color: #fff;
+    width: 100%;
+    height: 40px;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -133,6 +137,8 @@ button[type="submit"]:hover {
 .instagram-sign-up {
   background-color: #e1306c;
   color: #fff;
+    width: 100%;
+    height: 40px;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
