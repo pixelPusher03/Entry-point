@@ -58,6 +58,34 @@ form.addEventListener('submit', (e) => {
     password,
   };
 
+// JavaScript
+function googleSignUp() {
+  const authUrl = '(link unavailable)';
+  const clientId = 'YOUR_GOOGLE_CLIENT_ID';
+  const redirectUri = 'YOUR_REDIRECT_URI';
+  const scope = 'profile email';
+  const url = `${authUrl}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scope}&response_type=code`;
+  window.location.href = url;
+}
+
+function facebookSignUp() {
+  const authUrl = '(link unavailable)';
+  const clientId = 'YOUR_FACEBOOK_CLIENT_ID';
+  const redirectUri = 'YOUR_REDIRECT_URI';
+  const scope = 'email';
+  const url = `${authUrl}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scope}&response_type=code`;
+  window.location.href = url;
+}
+
+function instagramSignUp() {
+  const authUrl = '(link unavailable)';
+  const clientId = 'YOUR_INSTAGRAM_CLIENT_ID';
+  const redirectUri = 'YOUR_REDIRECT_URI';
+  const scope = 'basic';
+  const url = `${authUrl}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scope}&response_type=code`;
+  window.location.href = url;
+}
+
   // Send a request to the server to create a new user
   fetch('/api/users', {
     method: 'POST',
