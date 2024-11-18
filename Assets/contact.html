@@ -12,46 +12,34 @@
             <h1 class="page-header-title">Contact</h1>
         </div>
     </header>
-    <main class="blog">
+                <div class="w-full md:w-1/2">
+              <label for="phone" class="block text-sm mb-2 text-gray-600 dark:text-gray-400">Phone Number</label>
+              <input type="text" name="phone" id="phone" placeholder="+1 (555) 1234-567" required class="w-full px-3 py-2 placeholder-gray-300 border-2 border-gray-200 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300" />
 
-<!-- HTML -->
-<div class="contact-page">
-  <div class="container">
-    <h1 class="page-header-title">Contact Us</h1>
-    <div class="contact-form">
-      <form>
-        <div class="form-group">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name">
-        </div>
-        <div class="form-group">
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email">
-        </div>
-        <div class="form-group">
-          <label for="message">Message:</label>
-          <textarea id="message" name="message"></textarea>
-        </div>
-        <button type="submit" id="submit-btn">Send Message</button>
-      </form>
-    </div>
-    <div class="email-section">
-      <h2>Email Us</h2>
-      <p>If you prefer to contact us via email, you can reach us at:</p>
-    
+              <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
+                Please provide your phone number.
+              </div>
+            </div>
+          </div>
+          <div class="mb-6">
+            <label for="message" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Your Message</label>
+
+            <textarea rows="5" name="message" id="message" placeholder="Your Message" class="w-full px-3 py-2 placeholder-gray-300 border-2 border-gray-200 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300" required></textarea>
+            <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
+              Please enter your message.
+            </div>
+          </div>
+          <div class="mb-6">
+            <button type="submit" class="w-full px-3 py-4 text-white bg-indigo-500 rounded-md focus:bg-indigo-600 focus:outline-none">
+              Send Message
+            </button>
+          </div>
+          <p class="text-base text-center text-gray-400" id="result"></p>
+        </form>
+      </div>
     </div>
   </div>
 </div>
-
-        <div class="container">
-            <div class="blog-card-wrapper">
-                <div class="blog-card">
-                    <h2 class="blog-card-title">Get in Touch</h2>
-                    <p class="blog-card-content">Contact us through our website or by emailing us at <a href="mailto:smtechinc@gmail.com">smtech**@gmail.com</a>.</p>
-                </div>
-            </div>
-        </div>
-    </main>
     <footer class="footer">
         <div class="container">
             <p class="footer-rights">&copy; 2024 Sm Tech Inc. All rights reserved.</p>
