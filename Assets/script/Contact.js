@@ -1,38 +1,73 @@
-// JavaScript
-const form = document.querySelector('.contact-form form');
-const submitBtn = document.querySelector('#submit-btn');
+(function () {
+  "use strict";
+  /*
+   * Form Validation
+   */
 
-submitBtn.addEventListener('click', (e) => {
-  e.preventDefault();
-  const name = document.querySelector('#name').value;
-  const email = document.querySelector('#email').value;
-  const message = document.querySelector('#message').value;
+  // Fetch all the forms we want to apply custom validation styles to
+  const forms = document.querySelectorAll(".needs-validation");
+  const result = document.getElementById("result");
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms).forEach(function (form) {
+    form.addEventListener(
+      "submit",
+      function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault();
+          event.stopPropagation();
 
-  if (name === '' || email === '' || message === '') {
-    alert('Please fill out all fields');
-    return;
-  }
+          form.querySelectorAll(":invalid")[0].focus();
+        } else {
+          /*
+           * Form Submission using fetch()
+           */
 
-  const formData = {
-    name,
-    email,
-    message,
-  };
+          const formData = new FormData(form);
+          event.preventDefault();
+          event.stopPropagation();
+          const object = {};
+          formData.forEach((value, key) => {
+            object[key] = value;
+          });
+          const json = JSON.stringify(object);
+          result.innerHTML = "Please wait...";
 
-  fetch('/api/contact', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(formData),
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data);
-      alert('Message sent successfully!');
-    })
-    .catch((error) => {
-      console.error(error);
-      alert('Error sending message');
-    });
-});
+          fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json"
+            },
+            body: json
+          })
+            .then(async (response) => {
+              let json = await response.json();
+              if (response.status == 200) {
+                result.innerHTML = json.message;
+                result.classList.remove("text-gray-500");
+                result.classList.add("text-green-500");
+              } else {
+                console.log(response);
+                result.innerHTML = json.message;
+                result.classList.remove("text-gray-500");
+                result.classList.add("text-red-500");
+              }
+            })
+            .catch((error) => {
+              console.log(error);
+              result.innerHTML = "Something went wrong!";
+            })
+            .then(function () {
+              form.reset();
+              form.classList.remove("was-validated");
+              setTimeout(() => {
+                result.style.display = "none";
+              }, 5000);
+            });
+        }
+        form.classList.add("was-validated");
+      },
+      false
+    );
+  });
+})();
