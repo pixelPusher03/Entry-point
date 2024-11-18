@@ -1,126 +1,17 @@
-body {
-    font-family: Heebo, sans-serif;
-    color: #21243d;
-    margin: 0;
-    padding: 0;
+.invalid-feedback,
+.empty-feedback {
+  display: none;
 }
 
-.header {
-    background-color: #fff;
-    padding: 20px 0;
-    text-align: center;
+.was-validated :placeholder-shown:invalid ~ .empty-feedback {
+  display: block;
 }
 
-.page-header-title {
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 10px;
+.was-validated :not(:placeholder-shown):invalid ~ .invalid-feedback {
+  display: block;
 }
 
-.blog {
-    background-color: #edf7fa;
-    padding: 20px 0;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.blog-card-wrapper {
-    display: grid;
-    grid-row-gap: 20px;
-}
-
-.blog-card {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.blog-card-title {
-    font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 10px;
-}
-
-.footer {
-    background-color: #142850;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
-}
-
-.footer-rights {
-    font-size: 14px;
-    margin-bottom: 10px;
-}
-
-
-.contact-page {
-    padding: 20px 0;
-}
-
-.contact-page-title {
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 10px;
-}
-
-.contact-page-content {
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-.contact-page {
-  padding: 20px 0;
-}
-
-.contact-form {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.email-section {
-  margin-top: 20px;
-}
-
-.email-section h2 {
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-.email-section p {
-  font-size: 16px;
-  color: #666;
-  margin-bottom: 10px;
-}
-
-.email-section a {
-  font-size: 16px;
-  color: #337ab7;
-  text-decoration: none;
-}
-
-.email-section a:hover {
-  color: #23527c;
-}
-
-#submit-btn {
-  background-color: #337ab7;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-#submit-btn:hover {
-  background-color: #23527c;
+.is-invalid,
+.was-validated :invalid {
+  border-color: #dc3545;
 }
