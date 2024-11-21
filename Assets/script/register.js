@@ -58,34 +58,6 @@ form.addEventListener('submit', (e) => {
     password,
   };
 
-// JavaScript
-function googleSignUp() {
-  const authUrl = 'https://accounts.google.com/o/oauth2/auth';
-  const clientId = '610365318933-ji7c10f6l0rssc87bsnmiafpve5aoetp.apps.googleusercontent.com';
-  const redirectUri = 'https://Anondevsgagency.vercel.app';
-  const scope = 'profile email';
-  const url = `${authUrl}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scope}&response_type=code`;
-  window.location.href = url;
-}
-
-function facebookSignUp() {
-  const authUrl = '(link unavailable)';
-  const clientId = 'YOUR_FACEBOOK_CLIENT_ID';
-  const redirectUri = 'YOUR_REDIRECT_URI';
-  const scope = 'email';
-  const url = `${authUrl}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scope}&response_type=code`;
-  window.location.href = url;
-}
-
-function instagramSignUp() {
-  const authUrl = 'https://api.instagram.com/oauth/authorize';
-  const clientId = 'YOUR_INSTAGRAM_CLIENT_ID';
-  const redirectUri = 'YOUR_REDIRECT_URI';
-  const scope = 'basic';
-  const url = `${authUrl}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scope}&response_type=code`;
-  window.location.href = url;
-}
-
   // Send a request to the server to create a new user
   fetch('/api/users', {
     method: 'POST',
@@ -114,6 +86,11 @@ function instagramSignUp() {
 
 // Email validation function
 function validateEmail(email) {
+  if (email === null || email === undefined) {
+    return false;
+  }
+
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   return emailRegex.test(email);
 }
+```
