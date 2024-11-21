@@ -61,7 +61,7 @@ form.addEventListener('submit', (e) => {
 // JavaScript
 function googleSignUp() {
   const authUrl = '(link unavailable)';
-  const clientId = 'YOUR_GOOGLE_CLIENT_ID';
+  const clientId = '610365318933-ji7c10f6l0rssc87bsnmiafpve5aoetp.apps.googleusercontent.com';
   const redirectUri = 'YOUR_REDIRECT_URI';
   const scope = 'profile email';
   const url = `${authUrl}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scope}&response_type=code`;
