@@ -60,9 +60,9 @@ form.addEventListener('submit', (e) => {
 
 // JavaScript
 function googleSignUp() {
-  const authUrl = '(link unavailable)';
+  const authUrl = '(https://accounts.google.com/o/oauth2/auth)';
   const clientId = '610365318933-ji7c10f6l0rssc87bsnmiafpve5aoetp.apps.googleusercontent.com';
-  const redirectUri = 'YOUR_REDIRECT_URI';
+  const redirectUri = 'https://Anondevsgagency.vercel.app';
   const scope = 'profile email';
   const url = `${authUrl}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scope}&response_type=code`;
   window.location.href = url;
