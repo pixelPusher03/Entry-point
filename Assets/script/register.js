@@ -78,7 +78,7 @@ function facebookSignUp() {
 }
 
 function instagramSignUp() {
-  const authUrl = '(link unavailable)';
+  const authUrl = 'https://api.instagram.com/oauth/authorize';
   const clientId = 'YOUR_INSTAGRAM_CLIENT_ID';
   const redirectUri = 'YOUR_REDIRECT_URI';
   const scope = 'basic';
