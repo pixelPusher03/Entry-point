@@ -60,7 +60,7 @@ form.addEventListener('submit', (e) => {
 
 // JavaScript
 function googleSignUp() {
-  const authUrl = '(https://accounts.google.com/o/oauth2/auth)';
+  const authUrl = 'https://accounts.google.com/o/oauth2/auth';
   const clientId = '610365318933-ji7c10f6l0rssc87bsnmiafpve5aoetp.apps.googleusercontent.com';
   const redirectUri = 'https://Anondevsgagency.vercel.app';
   const scope = 'profile email';
