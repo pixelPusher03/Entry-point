@@ -1,39 +1,58 @@
-<form id="myForm">
-<button type="submit">Send Message</button>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sm Tech Inc. Sign Up</title>
+    <link rel="stylesheet" href="/Assets/css/register.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="page-header-title">Sign Up</h1>
+        </div>
+    </header>
+    <main class="blog">
+        <div class="container">
+            <div class="sign-up-form">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password:</label>
+                        <input type="password" id="confirm-password" name="confirm-password" required>
+                    </div>
+                    <button type="submit">Sign Up</button>
+                </form>
+            </div>
+        </div>
 
-<script>
-const form = document.getElementById('myForm');
-
-form.addEventListener('submit', (e) => {
-e.preventDefault();
-
-```const myHeaders = new Headers();
-myHeaders.append("Authorization", "App 588561670925339b300355845c58b480-2ba66a15-35d6-4adc-8447-a0b50dc3537b");
-myHeaders.append("Content-Type", "application/json");
-myHeaders.append("Accept", "application/json");
-
-const raw = JSON.stringify({
-  "messages": [
-    {
-      "destinations": [{"to":"256743215199"}],
-      "from": "447491163443",
-      "text": "Congratulations on sending your first message.\nGo ahead and check the delivery report in the next step."
-    }
-  ]
-});
-
-const requestOptions = {
-  method: "POST",
-  headers: myHeaders,
-  body: raw,
-  redirect: "follow"
-};
-
-fetch("https://g91y5e.api.infobip.com/sms/2/text/advanced", requestOptions)
-  .then((response) => response.text())
-  .then((result) => console.log(result))
-  .catch((error) => console.error(error));
-```
-});
-</script>
+<div class="sign-up-form">
+  <form>
+    <!-- ... -->
+  </form>
+  <div class="social-sign-up">
+    <button class="google-sign-up" onclick="googleSignUp()">Sign up with Google</button>
+    <button class="facebook-sign-up" onclick="facebookSignUp()">Sign up with Facebook</button>
+    <button class="instagram-sign-up" onclick="instagramSignUp()">Sign up with Instagram</button>
+  </div>
+</div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-rights">&copy; 2024 Sm Tech Inc. All rights reserved.</p>
+        </div>
+<script src"/Assets/script/register.js"></script>
+    </footer>
+</body>
+</html>
