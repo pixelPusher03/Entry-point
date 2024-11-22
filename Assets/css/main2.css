@@ -3,7 +3,7 @@ html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:b
 
 .button {
   position: bottom;
-  left: 50%;
+  align: center;
   transform: translate(-50%, -50%);
   height: 50px;
   width: 360px;
