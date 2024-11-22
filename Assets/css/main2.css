@@ -3,10 +3,9 @@ html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:b
 
 .button {
   position: bottom;
-  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 95px;
+  height: 50px;
   width: 360px;
   background: #7d2ae8;
   border-radius: 55px;
